@@ -1,0 +1,343 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+input{
+padding: 0;
+margin: 0;
+border: 0;
+border: none;
+}
+input {
+    outline:none;
+}
+
+
+
+body {
+  background-color: #65757F;
+}
+
+header{
+  height: 100px;
+  display: flex;
+  width: 50%;
+  margin: auto auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container{
+  margin: auto auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputs-and-button{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+}
+
+.name-and-inp-name-shop{
+  width: 48%;
+}
+
+.name-text{
+  margin-bottom: 2%;
+}
+
+.inp-name{
+  padding-left: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  color: rgba(0,0,0,0.5);
+}
+
+.name-and-inp-count-price{
+  width: 30%;
+}
+
+.price-text{
+  margin-bottom: 2%;
+}
+
+.inp-price{
+  padding-left: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  color: rgba(0,0,0,0.5);
+}
+
+.main-button{
+  cursor: pointer;
+  margin-top: 22px;
+  text-align: center;
+  line-height: 50px;
+  width: 15%;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #4B8569;
+  font-size: 1.3rem;
+}
+
+.total-container{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  height: 50px;
+}
+
+.total{
+  font-size: 1.5rem;
+}
+
+.rows-container{
+  width: 50%;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  align-items: center;
+  margin-bottom: 2%;
+}
+.empty-shopname-input{
+  width: 40%;
+}
+.shop{
+  
+  width: 40%;
+}
+.empty-shopname-input{
+  height: 30px;
+  width: 100%;
+}
+.adaptiv{
+  display: flex;
+  width: 50%;
+}
+.date{
+  width: 50%;
+  text-align: center;
+}
+
+.amount{
+  width: 30%;
+  text-align: center;
+}
+.empty-shopprice-input{
+  height: 30px;
+  width: 100%;
+}
+
+
+.mini-buttons {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+}
+
+.but-red{
+  cursor: pointer;
+  display: flex;
+  width: 45%;
+  overflow: hidden;
+}
+.but-red img{
+  width: 100%;
+}
+.dobavIzm{
+  cursor: pointer;
+  display: flex;
+  width: 45%;
+  overflow: hidden;
+  border: 1px solid rgb(3, 201, 3);
+  border-radius: 5px;
+}
+
+.but-del{
+  cursor: pointer;
+  display: flex;
+  width: 45%;
+  overflow: hidden;
+}
+.but-del img{
+  width: 100%;
+}
+
+@media screen and (min-width: 900px) and (max-width:1150px){
+  header{
+    width: 80%;
+  }
+  
+  .main-container{
+    width: 80%;
+  }
+
+  .rows-container{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:900px){
+  body {
+    background-color: #E2F3FF;
+  }
+  header{
+    width: 100%;
+  }
+  .row{
+    margin-bottom: 8%;
+  }
+  .main-container{
+    
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inputs-and-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 200px;
+  }
+  .name-and-inp-name-shop{
+    width: 100%;
+  }
+  
+  .name-and-inp-count-price{
+    width: 100%;
+  }
+  .inp-name{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(172, 171, 171);
+    margin-bottom: 8px;
+  }
+  .inp-price{
+    width: 100%;
+    height: 40px;
+    color: rgba(0,0,0,0.5);
+    border: 1px solid rgb(172, 171, 171);
+  }
+
+  .name-text{
+    margin-bottom: 1%;
+  }
+  .price-text{
+    margin-bottom: 1%;
+  }
+
+  .main-button{
+    margin-top: 12px;
+    line-height: 35px;
+    width: 35%;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #59b181;
+    font-size: 1.3rem;
+    align-self: flex-end;
+  }
+
+  .rows-container{
+    width: 90%;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .adaptiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 35%;
+  }
+  .mini-buttons{
+    display: flex;
+    width: 50%;
+  }
+  
+  .but-red{
+    cursor: pointer;
+    display: flex;
+    width: 45%;
+    overflow: hidden;
+  }
+  .but-red img{
+    width: 100%;
+  }
+  .dobavIzm{
+    cursor: pointer;
+    display: flex;
+    width: 45%;
+    overflow: hidden;
+    border: 1px solid rgb(3, 201, 3);
+    border-radius: 5px;
+  }
+  
+  .but-del{
+    cursor: pointer;
+    display: flex;
+    width: 45%;
+    overflow: hidden;
+  }
+  .but-del img{
+    width: 100%;
+  }
+  .date{
+    width: 100%;
+    text-align: end;
+    margin-bottom: 5%;
+  }
+  
+  .amount{
+    width: 100%;
+    text-align: end;
+    margin-bottom: 5%;
+  }
+  .empty-shopprice-input{
+    height: 30px;
+    width: 100%;
+  }
+  
+}
+  
