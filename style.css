@@ -4,12 +4,10 @@
   box-sizing: border-box;
 }
 
-
 ul[class],
 ol[class] {
   padding: 0;
 }
-
 
 body,
 h1,
@@ -27,12 +25,14 @@ dl,
 dd {
   margin: 0;
 }
+
 input{
 padding: 0;
 margin: 0;
 border: 0;
 border: none;
 }
+
 input {
     outline:none;
 }
@@ -43,7 +43,7 @@ body {
   background-color: #65757F;
 }
 
-header{
+header {
   height: 100px;
   display: flex;
   width: 50%;
@@ -52,7 +52,7 @@ header{
   align-items: center;
 }
 
-.main-container{
+.main-container {
   margin: auto auto;
   width: 50%;
   display: flex;
@@ -60,7 +60,7 @@ header{
   align-items: center;
 }
 
-.inputs-and-button{
+.inputs-and-button {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -68,15 +68,15 @@ header{
   height: 150px;
 }
 
-.name-and-inp-name-shop{
+.name-and-inp-name-shop {
   width: 48%;
 }
 
-.name-text{
+.name-text {
   margin-bottom: 2%;
 }
 
-.inp-name{
+.inp-name {
   padding-left: 10px;
   width: 100%;
   height: 50px;
@@ -84,15 +84,15 @@ header{
   color: rgba(0,0,0,0.5);
 }
 
-.name-and-inp-count-price{
+.name-and-inp-count-price {
   width: 30%;
 }
 
-.price-text{
+.price-text {
   margin-bottom: 2%;
 }
 
-.inp-price{
+.inp-price {
   padding-left: 10px;
   width: 100%;
   height: 50px;
@@ -100,7 +100,7 @@ header{
   color: rgba(0,0,0,0.5);
 }
 
-.main-button{
+.main-button {
   cursor: pointer;
   margin-top: 22px;
   text-align: center;
@@ -112,25 +112,25 @@ header{
   font-size: 1.3rem;
 }
 
-.total-container{
+.total-container {
   display: flex;
   width: 100%;
   justify-content: flex-end;
   height: 50px;
 }
 
-.total{
+.total {
   font-size: 1.5rem;
 }
 
-.rows-container{
+.rows-container {
   width: 50%;
   margin: auto auto;
   display: flex;
   flex-direction: column;
 }
 
-.row{
+.row {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -138,35 +138,39 @@ header{
   align-items: center;
   margin-bottom: 2%;
 }
-.empty-shopname-input{
+
+.empty-shopname-input {
   width: 40%;
 }
-.shop{
-  
+
+.shop {
   width: 40%;
 }
-.empty-shopname-input{
+
+.empty-shopname-input {
   height: 30px;
   width: 100%;
 }
-.adaptiv{
+
+.adaptiv {
   display: flex;
   width: 50%;
 }
-.date{
+
+.date {
   width: 50%;
   text-align: center;
 }
 
-.amount{
+.amount {
   width: 30%;
   text-align: center;
 }
-.empty-shopprice-input{
+
+.empty-shopprice-input {
   height: 30px;
   width: 100%;
 }
-
 
 .mini-buttons {
   display: flex;
@@ -174,16 +178,18 @@ header{
   justify-content: space-between;
 }
 
-.but-red{
+.but-red {
   cursor: pointer;
   display: flex;
   width: 45%;
   overflow: hidden;
 }
-.but-red img{
+
+.but-red img {
   width: 100%;
 }
-.dobavIzm{
+
+.dobavIzm {
   cursor: pointer;
   display: flex;
   width: 45%;
@@ -192,83 +198,92 @@ header{
   border-radius: 5px;
 }
 
-.but-del{
+.but-del {
   cursor: pointer;
   display: flex;
   width: 45%;
   overflow: hidden;
 }
-.but-del img{
+
+.but-del img {
   width: 100%;
 }
 
-@media screen and (min-width: 900px) and (max-width:1150px){
-  header{
+@media screen and (min-width: 900px) and (max-width:1150px) {
+
+  header {
     width: 80%;
   }
   
-  .main-container{
+  .main-container {
     width: 80%;
   }
 
-  .rows-container{
+  .rows-container {
     width: 80%;
   }
 }
 
-@media screen and (max-width:900px){
+@media screen and (max-width:900px) {
+
   body {
     background-color: #E2F3FF;
   }
-  header{
+
+  header {
     width: 100%;
   }
-  .row{
+
+  .row {
     margin-bottom: 8%;
   }
-  .main-container{
-    
+
+  .main-container {
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .inputs-and-button{
+  .inputs-and-button {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
     height: 200px;
   }
-  .name-and-inp-name-shop{
+
+  .name-and-inp-name-shop {
     width: 100%;
   }
   
-  .name-and-inp-count-price{
+  .name-and-inp-count-price {
     width: 100%;
   }
-  .inp-name{
+
+  .inp-name {
     width: 100%;
     height: 40px;
     border: 1px solid rgb(172, 171, 171);
     margin-bottom: 8px;
   }
-  .inp-price{
+
+  .inp-price {
     width: 100%;
     height: 40px;
     color: rgba(0,0,0,0.5);
     border: 1px solid rgb(172, 171, 171);
   }
 
-  .name-text{
-    margin-bottom: 1%;
-  }
-  .price-text{
+  .name-text {
     margin-bottom: 1%;
   }
 
-  .main-button{
+  .price-text {
+    margin-bottom: 1%;
+  }
+
+  .main-button {
     margin-top: 12px;
     line-height: 35px;
     width: 35%;
@@ -279,33 +294,37 @@ header{
     align-self: flex-end;
   }
 
-  .rows-container{
+  .rows-container {
     width: 90%;
     margin: auto auto;
     display: flex;
     flex-direction: column;
   }
-  .adaptiv{
+
+  .adaptiv {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     width: 35%;
   }
-  .mini-buttons{
+
+  .mini-buttons {
     display: flex;
     width: 50%;
   }
   
-  .but-red{
+  .but-red {
     cursor: pointer;
     display: flex;
     width: 45%;
     overflow: hidden;
   }
-  .but-red img{
+
+  .but-red img {
     width: 100%;
   }
-  .dobavIzm{
+
+  .dobavIzm {
     cursor: pointer;
     display: flex;
     width: 45%;
@@ -314,27 +333,30 @@ header{
     border-radius: 5px;
   }
   
-  .but-del{
+  .but-del {
     cursor: pointer;
     display: flex;
     width: 45%;
     overflow: hidden;
   }
-  .but-del img{
+
+  .but-del img {
     width: 100%;
   }
-  .date{
+
+  .date {
     width: 100%;
     text-align: end;
     margin-bottom: 5%;
   }
   
-  .amount{
+  .amount {
     width: 100%;
     text-align: end;
     margin-bottom: 5%;
   }
-  .empty-shopprice-input{
+  
+  .empty-shopprice-input {
     height: 30px;
     width: 100%;
   }

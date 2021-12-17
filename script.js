@@ -11,6 +11,7 @@ let countTotal = 0;
 inpPrice.addEventListener('click', () => {
   inpPrice.value = '';
 });
+
 inpName.addEventListener('click', () => {
   inpName.value = '';
 });
@@ -29,17 +30,18 @@ const turnOn = async () => {
 
   arr.map((item, index) => {
  
+    const {nameShop, dateShop, rubles} = item;
+
     let row = document.createElement('div');
     row.id = `row-${index}`;
     row.className = 'row';
     rowsContainer.appendChild(row);
 
-
     let shop = document.createElement('div');
     let pShop = document.createElement('p');
     shop.className = 'shop';
     row.appendChild(shop);
-    pShop.innerHTML = item.nameShop;
+    pShop.innerHTML = nameShop;
     shop.appendChild(pShop);
 
     let adaptiv = document.createElement('div');
@@ -48,14 +50,14 @@ const turnOn = async () => {
 
     let dateAmount = document.createElement('div');
     dateAmount.className = 'date';
-    dateAmount.innerHTML = item.dateShop;
+    dateAmount.innerHTML = dateShop;
     adaptiv.appendChild(dateAmount);
 
     let amount = document.createElement('div');
     let pAmount = document.createElement('p');
     amount.className = 'amount';
     adaptiv.appendChild(amount);
-    pAmount.innerHTML = item.rubles + 'p.';
+    pAmount.innerHTML = rubles + 'p.';
     amount.appendChild(pAmount);
 
     let miniButs = document.createElement('div');
@@ -88,9 +90,8 @@ const turnOn = async () => {
   });
 }
 
-
 const dobav = async () => {
-  let date = new Date();
+  const date = new Date();
   arr.push({nameShop: inpName.value, dateShop: `${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()}`, rubles: inpPrice.value});
 
   const resp = await fetch("http://localhost:8000/createTask", {
@@ -110,6 +111,7 @@ const dobav = async () => {
   arr = result.data;
 
   turnOn();
+
   inpName.value = 'Куда было потрачено';
   inpPrice.value = 'Сколько было потрачено';
 }
@@ -135,16 +137,18 @@ const redact = (item, index, pShop, pAmount, butReduct, shop, amount, miniButs) 
   let dobavIzm = document.createElement('div');
   dobavIzm.className = 'dobavIzm';
   miniButs.appendChild(dobavIzm);
-  dobavIzm.addEventListener('click', () => AddIzm(item, index, pShop, pAmount, butReduct, shop, amount, miniButs, emptyInpName, emptyInpPrice));
+  dobavIzm.addEventListener('click', () => AddIzm(
+    item, index, pShop, pAmount, butReduct, shop, amount, miniButs, emptyInpName, emptyInpPrice)
+    );
 }
 
 const AddIzm = async (item, index, pShop, pAmount, butReduct, shop, amount, miniButs, emptyInpName, emptyInpPrice) => {
-  console.log(pShop)
-  pShop.style = 'display:block';
-  pAmount.style = 'display:block';
-  butReduct.style = 'display:flex';
-  emptyInpPrice.style = 'display:none';
-  emptyInpName.style = 'display:none';
+
+  pShop.style = 'display: block';
+  pAmount.style = 'display: block';
+  butReduct.style = 'display: flex';
+  emptyInpPrice.style = 'display: none';
+  emptyInpName.style = 'display: none';
 
   arr[index].nameShop = emptyInpName.value;
   arr[index].rubles = emptyInpPrice.value;
@@ -169,8 +173,6 @@ const AddIzm = async (item, index, pShop, pAmount, butReduct, shop, amount, mini
 
 const deleteOne = async (item, index,) => {
   
-
-  console.log(item._id);
   const resp = await fetch (`http://localhost:8000/deleteTask?_id=${item._id}`,
       {
         method: "DELETE",
